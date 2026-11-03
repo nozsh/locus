@@ -6,6 +6,6 @@ git submodule update --init --recursive
 hugo
 (cd blog && hugo)
 
-cp static/404.html public/404.html
+cp __service/404.html public/404.html
 
 hugo version
