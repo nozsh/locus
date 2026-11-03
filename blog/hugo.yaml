@@ -1,0 +1,6 @@
+baseURL: https://example.org/blog
+locale: en-us
+title: My New Hugo Project
+theme: PaperMod
+themesDir: ../themes
+publishDir: ../public/blog
