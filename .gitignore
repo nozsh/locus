@@ -13,4 +13,5 @@ content/**/*.gif
 content/**/*.avif
 
 # Other
+__assets/
 .zettel-notes/
