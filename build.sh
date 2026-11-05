@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-git submodule update --init --recursive
+SITE_URL="${SITE_URL:-https://nzsh.cc}"; SITE_URL="${SITE_URL%/}"
 
+git submodule update --init --recursive
 bash ./cleanup.sh
 
-hugo
-(cd blog && hugo)
+hugo -b "$SITE_URL/"
+(cd blog && hugo -b "$SITE_URL/blog/")
 
 cp __service/404.html public/404.html
 cp __service/404.html public/blog/404.html
