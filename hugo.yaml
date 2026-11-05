@@ -1,4 +1,207 @@
 baseURL: https://nzsh.cc/
-locale: en-us
-title: My New Hugo Project
+title: "nzsh"
 theme: PaperMod
+
+# DEV -------------
+# theme: papermod
+# themesDir: ../
+# DEV -------------
+
+############ SITE / THEME
+params:
+  env: production
+  author: ["𝙓"]
+  llmsFullContent: false
+  DateFormat: "2 Jan 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  # CanonicalLinkText: "Источник:"
+  # ShowAllPagesInArchive: true
+  ShowPageNums: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  # images: ["images/papermod-cover.png"]
+  hidemeta: false
+  hideSummary: false
+  UseHugoToc: true
+  showtoc: false
+  tocopen: true
+  disableAnchoredHeadings: false
+  TocSide: "right"
+  EnableImageZoom: true
+  ListMasonry: true
+  xmas: false
+  assets:
+    disableHLJS: true # disable highlight.js
+    disableFingerprinting: false
+    favicon: "fav/favicon.ico"
+    favicon32x32: "fav/favicon-32px.png"
+    favicon16x16: "fav/favicon-16px.png"
+    apple_touch_icon: "fav/favicon-180px.png"
+    safari_pinned_tab: "fav/favicon.svg"
+    looseAssetsURL: "https://cdn.nzsh.cc/"
+    looseAssetsPATH: "@loose/"
+    assetsURL: "https://cdn.nzsh.cc/img/blog/"
+    assetsPATH: "@img/"
+    assetsURL_VID: "https://cdn.nzsh.cc/vid/blog/"
+    assetsPATH_VID: "@vid/"
+  label:
+    # text: "..."
+    # icon: logo-256px.avif
+    # iconHeight: 35px
+  ################################################
+  homeInfoParams:
+    # Title: "..."
+    # Content: "Заметки. Идеи. Гайды. <br> abc"
+
+  socialIcons: # optional
+    - name: "GitHub"
+      url: "https://github.com/nozsh?sl"
+
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: "𝙓"
+    subtitle: "Madness, competence, and courage."
+    imageUrl: "logo-256px.jpg"
+    # imageUrl: "/bio/x/avatar-bw.avif"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: Cowboy Bebop
+    # buttons:
+    #   - identifier: contact
+    #     name: contact
+    #     url: /contact
+    #     weight: 10
+  ################################################
+  cover:
+    responsiveImages: true # More one size of cover
+    linkFullImages: false # Clicable cover
+    # hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    # hiddenInSingle: false # hide on single page
+  editPost:
+    # URL: "https://github.com/nozsh/locus/tree/main/content"
+    appendFilePath: true # to append file path to Edit link
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+############ SAFE
+# mainSections: ["posts"]
+locale: ru
+defaultContentLanguage: ru
+defaultContentLanguageInSubdir: false
+disableDefaultLanguageRedirect: false
+menu:
+  main:
+    - identifier: contact
+      name: contact
+      url: /contact
+      weight: 10
+    - identifier: blog
+      name: blog
+      url: /blog
+      weight: 100
+    - identifier: repo
+      name: repo
+      url: "https://github.com/nozsh/locus?sl"
+      weight: 200
+    # - identifier: tags
+    #   name: / t /
+    #   url: tags/
+    #   weight: 300
+    # - identifier: nzshub
+    #   name: ~/
+    #   url: ../
+    #   weight: 340
+languages:
+  ru:
+    code: ru
+    direction: ltr
+    name: Русский
+    weight: 10
+    params:
+        description: "Заметки. Идеи. Гайды."
+        keywords: [Блог, технологии, заметки, идеи, гайды, nzsh, nozsh]
+  en:
+    code: en
+    direction: ltr
+    name: English
+    weight: 50
+    params:
+      description: "Notes. Ideas. Guides."
+      keywords: [Blog, tech, notes, ideas, guides, nzsh, nozsh]
+
+pagination:
+  disableAliases: false
+  pagerSize: 12
+
+enableRobotsTXT: false
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# outputFormats:
+#   LLMS:
+#     mediaType: "text/plain"
+#     baseName: "llms"
+#     isPlainText: true
+#   LLMSFULL:
+#     mediaType: "text/plain"
+#     baseName: "llms-full"
+#     isPlainText: true
+
+outputs:
+  home:
+    - HTML
+    # - RSS
+    # - JSON # necessary for search
+    # - LLMS
+    # - LLMSFULL
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+pygmentsUseClasses: true
+enableEmoji: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+  highlight:
+    noClasses: false
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+
+############ DANGER
+disableKinds:
+  - taxonomy
+  - term
+
+permalinks:
+  posts: "/:contentbasename" # convert = /posts/post1 => /post1, https://gohugo.io/content-management/urls/
+  pages: "/:contentbasename"
+  bridges: "/:contentbasename"

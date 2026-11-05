@@ -1,0 +1,17 @@
+# nzsh
+
+> Technical blog-wiki: self-hosted, local AI, network, web, media tools, etc. Practical guides and notes, as well as tech diaries.
+
+## Languages
+
+- Russian (main)
+- English
+
+## Blog
+- [Blog (RU)](https://nzsh.cc/blog/): blog content in Russian
+- [Blog LLMS (RU)](https://nzsh.cc/blog/llms.txt): blog index for LLM/AI in Russian
+- [Blog (EN)](https://nzsh.cc/blog/en/): blog content in English
+- [Blog LLMS (EN)](https://nzsh.cc/blog/en/llms.txt): blog index for LLM/AI in English
+
+## Optional
+- [Contact (RU)](https://nzsh.cc/contact) / [Contact (EN)](https://nzsh.cc/en/contact): contact with author - social links, email, etc.

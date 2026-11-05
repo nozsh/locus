@@ -1,0 +1,5 @@
+# [source] [destination] [code]
+# /something / 302
+
+/kb / 302
+/kb/* / 302
