@@ -3,6 +3,8 @@ set -euo pipefail
 
 git submodule update --init --recursive
 
+bash ./cleanup.sh
+
 hugo
 (cd blog && hugo)
 

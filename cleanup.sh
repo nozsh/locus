@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-rm -rf public/
+rm -rf public/ blog/public/
