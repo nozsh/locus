@@ -125,9 +125,9 @@ menu:
       name: / t /
       url: tags/
       weight: 300
-    - identifier: nzshub
+    - identifier: root
       name: ~/
-      url: ../
+      url: ../../
       weight: 340
 languages:
   ru:
