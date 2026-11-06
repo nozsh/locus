@@ -2,6 +2,7 @@ public/
 resources/
 blog/public/
 blog/resources/
+blog/content/drafts/
 
 # Media
 content/**/*.jpg
