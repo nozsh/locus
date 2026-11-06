@@ -2,8 +2,8 @@
 # draft: true
 # url: "" # slug
 title: "𝙓"
-description: "Local author of some texts."
-summary: "Local author of some texts."
+description: "my name is U+1D653, but everybody calls me tofu."
+summary: "my name is U+1D653, but everybody calls me tofu."
 # date: 2001-01-29
 # lastmod: 2001-01-29
 categories: [""] # ["cat 1", "cat 2"]
