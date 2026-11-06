@@ -62,8 +62,8 @@ build:
 - AMD Ryzen 7 7700 @ 8 x 3.8GHz/5.3GHz
   - Thermalright Phantom Spirit 120 SE @ 1500RPM x2
   - PBO 80 Level 4
-  - 80 -- Max temp °C.
-  - Level 4 -- OC (higher = more)
+    - 80 -- Max temp °C.
+    - Level 4 -- OC (higher = more)
 
 ## GPU
 
