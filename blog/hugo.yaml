@@ -7,6 +7,9 @@ publishDir: ../public/blog
 # DEV -------------
 # theme: papermod
 # themesDir: ../..
+# build:
+  # buildStats:
+    # enable: true
 # DEV -------------
 
 ############ SITE / THEME
