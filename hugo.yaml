@@ -198,6 +198,7 @@ markup:
 
 ############ DANGER
 disableKinds:
+  - sitemap
   - taxonomy
   - term
 
