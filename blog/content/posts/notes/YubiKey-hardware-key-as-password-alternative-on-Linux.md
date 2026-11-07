@@ -257,5 +257,3 @@ ARGS=(/usr/lib/pam.d/sddm /etc/pam.d/sddm); command -v kompare > /dev/null && ko
 ## DMS
 
 В настройках Lock Screen включаем Enable security key authentication, откроется терминал с выбором аутентификации, выберите что-то, я предпочитаю sudo и ввести пароль (он же ключ если уже настроили). Подробнее [здесь](https://duxlabs.dev/docs/dms/lock-screen-authentication?sl) и [тут](https://duxlabs.dev/docs/dms-greeter/configuration#security-keys?sl).
-
-{{< 1wordfix >}}
