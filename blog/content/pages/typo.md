@@ -46,6 +46,13 @@ cover:
   # hidden: true # only hide on current single page
 ---
 
+## Markdown VS HTML/Shortcodes
+
+Шорткоды открываются двумя способами:
+
+1. `< ... >` -- стандартный, если нет форсированной обработки в md, то работает для html и шорткодов.
+2. `% ... %` -- форсированный markdown.
+
 ## Каллауты
 
 {{< callout/note >}}
@@ -157,8 +164,6 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 
 ## Спойлер
 
-### Markdown
-
 {{% details/1 "Заголовок" open %}}
 **Контент**
 {{% /details/1 %}}
@@ -168,12 +173,6 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 **Контент**
 {{%/* /details/1 */%}}
 ```
-
-### html
-
-{{< details/1 "Заголовок" open >}}
-<strong>Контент</strong>
-{{< /details/1 >}}
 
 ```md
 {{</* details/1 "Заголовок" open */>}}
@@ -227,22 +226,42 @@ start=30&end=35&controls=0
 
 ## Список источников
 
-В markdown.
-
 {{< references >}}
-
 - Источник [Источник](#)
 - Источник [Источник](#)
 - Источник [Источник](#)
-  {{< /references >}}
+{{< /references >}}
 
 ```md
 {{</* references */>}}
+- Источник [Источник](#)
+- Источник [Источник](#)
+- Источник [Источник](#)
+{{</* /references */>}}
+```
 
-- Источник [Источник](#)
-- Источник [Источник](#)
-- Источник [Источник](#)
-  {{</* /references */>}}
+## Steps
+
+{{< steps/steps >}}
+{{% steps/step "Шаг" %}}
+Это первый шаг, тут работает **Markdown**.
+{{% /steps/step %}}
+
+{{< steps/step "Шаг" >}}
+Это второй шаг, тут работает <strong>HTML</strong>
+{{< /steps/step >}}
+{{< /steps/steps >}}
+
+```md
+{{</* steps/steps */>}}
+{{%/* steps/step "Шаг" */%}}
+Это первый шаг, тут работает **Markdown**, код и списки.
+{{%/* /steps/step */%}}
+
+{{</* steps/step "Шаг" */>}}
+Это второй шаг, тут работает <strong>HTML</strong>
+{{</* /steps/step */>}}
+{{</* /steps/steps */>}}
 ```
 
 ## Заголовки
