@@ -4,8 +4,8 @@ title: "Брутфорс архива WinRAR на Windows"
 description: "Покажу как перебирать пароли от архива WinRAR, используя 7z и Batch."
 summary: "Покажу как перебирать пароли от архива WinRAR, используя 7z и Batch."
 date: 2024-05-15
-categories: ["Long Read", "Hacking"] # ["cat 1", "cat 2"]
-tags: ["Windows"] # ['tag 1', 'tag 2']
+categories: ["Long Read", "System"] # ["cat 1", "cat 2"]
+tags: ["Windows", "Hacking"] # ['tag 1', 'tag 2']
 author: ["𝙓"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 
