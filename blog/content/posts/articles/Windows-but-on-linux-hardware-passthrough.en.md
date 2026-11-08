@@ -132,7 +132,7 @@ GUEST (Windows) [virt. hardware]
 
 It's such a f\*cking layer of fat between the hardware and the OS (a thinner one with VirtIO), I/O (Input/Output) is in the shit, we're in the shit, everything lags. *Not good.*
 
-This is why VFIO exists, but it has mutated from some kind of technology into what's by now a ~~bro term~~ category/topic, which can cover not only VFIO itself by definition, but something bigger, which is what this will be about. So it comes out like this:
+This is why VFIO exists, but it has mutated from some kind of technology into what's by now a category/topic, which can cover not only VFIO itself by definition, but something bigger, which is what this will be about. So it comes out like this:
 
 ```{linenos=false}
 HOST (Linux) [hardware (was here)]
@@ -1519,7 +1519,7 @@ Don't do anything.
 
 In Settings, search for Firewall --> Windows Defender Firewall --> Allow an app or feature... --> add ClipCascade.exe there. _Just in case._
 
-<kbd>WIN</kbd> + <kbd>R</kbd> --> `intl.cpl` --> Administrative --> Change system locale -- Use Unicode UTF-8..., and reboot, otherwise without this you might not be able to copy and paste **non**-English text.
+~~<kbd>WIN</kbd> + <kbd>R</kbd> --> `intl.cpl` --> Administrative --> Change system locale -- Use Unicode UTF-8..., and reboot, otherwise without this you might not be able to copy and paste **non**-English text.~~ -- don't do this by default, some software may conflict with it. Only do this if it's necessary/something isn't working.
 
 **Alternative automation**:
 
