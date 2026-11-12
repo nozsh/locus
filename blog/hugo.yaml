@@ -188,6 +188,10 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      extras:
+        mark:
+          enable: true
   tableOfContents:
     startLevel: 2
     endLevel: 6
