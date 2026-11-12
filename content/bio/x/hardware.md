@@ -88,14 +88,17 @@ build:
 
 - MONTECH KING 95 @ BLACK
 
-### Fans
+Fan Accessories:
+
+- Splitter DEEPCOOL SC790
+- Splitter DEEPCOOL FH-04
+
+Fans:
 
 - DEEPCOOL FD14 @ 140mm / 400-1650RPM / x2 @ BLACK [R-FD14-BKNPN1-G]
 - DEEPCOOL RF120 FS @ 120mm / 500-1500RPM / x1
 - Arctic P12 Pro Reverse @ 120mm / 500-3000RPM / x3 @ BLACK
 - Arctic Cooling P12 PWM @ 120mm / 200-1800RPM
-- Splitter DEEPCOOL SC790
-- Splitter DEEPCOOL FH-04
 
 Position:
 

@@ -53,6 +53,8 @@ cover:
 1. `< ... >` -- стандартный, если нет форсированной обработки в md, то работает для html и шорткодов.
 2. `% ... %` -- форсированный markdown.
 
+Или если есть спец. флаг `md=true` -- форсированный markdown.
+
 ## Каллауты
 
 {{< callout/note >}}
@@ -118,25 +120,18 @@ cover:
 
 **Inline callout**
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam duo dolores et ea rebum. {{< callout/inline hyphens >}}Lorem Ipsum is simply dummy text of the printing and typesetting industry.{{< /callout/inline >}} Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam duo dolores et ea rebum. {{< callout/inline hyphens=false md=false >}}Lorem **Ipsum** is simply dummy text of the printing and typesetting industry.{{< /callout/inline >}} Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 ```md {hl_lines=[3,4]}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam duo dolores et ea rebum. {{</* callout/inline hyphens */>}}Lorem
-Ipsum is simply dummy text of the printing and typesetting industry.{{</* /callout/inline */>}}
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam duo dolores et ea rebum. {{</* callout/inline hyphens=false md=false */>}}Lorem **Ipsum** is simply dummy text of the printing and typesetting industry.{{</* /callout/inline */>}} Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 ```
 
 ```md
-{{%/* callout/inline hyphens */%}}**Inline**{{%/* /callout/inline */%}}
+{{</* callout/inline */>}}**Inline**{{</* /callout/inline */>}}
 ```
 
-```md
-{{</* callout/inline hyphens */>}}<strong>Inline</strong>{{</* /callout/inline */>}}
-```
-
-Наличие "hyphens" включает переносы.
+- `hyphens` (default: `true`) -- дефисы (перенос)
+- `md` (default: `true`) -- рендерить содержимое как markdown
 
 ## Ахтунг
 
@@ -284,20 +279,20 @@ start=30&end=35&controls=0
 
 ## Разметка
 
-| Стиль                                    |                Markdown |
-| :--------------------------------------- | ----------------------: |
-| **Жирный**                               | `**text**` / `__text__` |
-| _Курсив_                                 |     `*text*` / `_text_` |
-| ~~Перечеркнутый~~                        |              `~~text~~` |
-| <u>Подчеркнутый</u>                      |           `<u>text</u>` |
-| Sub<sub>Текст</sub>                      |       `<sub>text</sub>` |
-| Sup<sup>Текст</sup>                      |       `<sup>text</sup>` |
-| [Ссылка](typo)                           |             `[text](#)` |
-| [Белая ссылка](https://example.com/?sl)  |          `[text](#?sl)` |
-| [Черная ссылка](https://example.com/?nt) |          `[text](#?nt)` |
-| `inline code`                            |            `` `text` `` |
-| <mark>Выделение</mark>                   |     `<mark>text</mark>` |
-| <kbd>Клавиша</kbd>                       |       `<kbd>text</kbd>` |
+| Стиль                                    |                         Markdown |
+| :--------------------------------------- | -------------------------------: |
+| **Жирный**                               |          `**text**` / `__text__` |
+| _Курсив_                                 |              `*text*` / `_text_` |
+| ~~Перечеркнутый~~                        |                       `~~text~~` |
+| <u>Подчеркнутый</u>                      |                    `<u>text</u>` |
+| Sub<sub>Текст</sub>                      |                `<sub>text</sub>` |
+| Sup<sup>Текст</sup>                      |                `<sup>text</sup>` |
+| [Ссылка](typo)                           |                      `[text](#)` |
+| [Белая ссылка](https://example.com/?sl)  |                   `[text](#?sl)` |
+| [Черная ссылка](https://example.com/?nt) |                   `[text](#?nt)` |
+| `inline code`                            |                     `` `text` `` |
+| ==Выделение==                            | `==text==` / `<mark>text</mark>` |
+| <kbd>Клавиша</kbd>                       |                `<kbd>text</kbd>` |
 
 ### О ссылках
 

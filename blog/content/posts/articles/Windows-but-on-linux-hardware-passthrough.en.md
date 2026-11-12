@@ -163,11 +163,11 @@ This text describes AMD CPU + NVIDIA GPU, if you have an Intel processor -- ther
 
 So. I chose openSUSE Tumbleweed + KDE Plasma. _Why?_ We need the newest releases of everything -- a rolling-release scheme, in order to pull off this trick with a VM running at 1:1 performance compared to bare metal. Debian and other LTS distros _don't really_ fit the bill.
 
-The obvious option is Arch.{{% callout/inline hyphens %}}![I use Arch btw](@loose/img/memes/i-use-arch-btw-1.cropped.avif){{% /callout/inline %}} A developer pushed a software update -- you installed it, just what you need. But because of this Arch often breaks, and you have to keep an eye on the [news feed](https://archlinux.org/news/?sl) of updates to check "is my system going to break after this update, and what do I need to do manually", *not cool*.
+The obvious option is Arch.{{< callout/inline >}}![I use Arch btw](@loose/img/memes/i-use-arch-btw-1.cropped.avif){{< /callout/inline >}} A developer pushed a software update -- you installed it, just what you need. But because of this Arch often breaks, and you have to keep an eye on the [news feed](https://archlinux.org/news/?sl) of updates to check "is my system going to break after this update, and what do I need to do manually", *not cool*.
 
 There's Void, which is like Arch, except updates are automatically tested, so the chance that the system will go down after an update is much lower. But Void uses runit instead of systemd, which for some people is a plus, but systemd is mega-popular, everything is built for it, do you need it, considering how complex the topic is? And also, I heard it's mostly old stuff/meager repositories there, everything new you have to build by hand.
 
-And the third option --- openSUSE Tumbleweed,{{% callout/inline hyphens %}}![Arch for fun, openSUSE for work](@loose/img/memes/animated.feel-me-think-about-it-1.avif){{% /callout/inline %}} which is like Void, but with systemd and the newest software, plus a built-in YaST GUI application through which you can configure the system and set up a KVM literally in one click.
+And the third option --- openSUSE Tumbleweed,{{< callout/inline >}}![Arch for fun, openSUSE for work](@loose/img/memes/animated.feel-me-think-about-it-1.avif){{< /callout/inline >}} which is like Void, but with systemd and the newest software, plus a built-in YaST GUI application through which you can configure the system and set up a KVM literally in one click.
 
 As for KDE Plasma, that's because it's the most feature-packed and simple. For the time being + tests -- just the thing. *At the time of writing this text, only in KDE Plasma does 4K HDR 320 Hz work properly, or something like that, maybe it matters to someone.*
 
@@ -411,7 +411,7 @@ But more **IMPORTANTLY**, if you put a different disk in its place, it will be a
 
 Go to Boot Options and select that same "PCI ID" there. That's it. Simple, right?
 
-Windows should boot into safe mode,{{% callout/inline hyphens %}}It's a good idea to boot into safe mode when the system disk changes, the disk is the same, but for Windows it used to be Red Hat and now it isn't Red Hat anymore -- that counts as a disk change.{{% /callout/inline %}} exit safe mode:
+Windows should boot into safe mode,{{< callout/inline >}}It's a good idea to boot into safe mode when the system disk changes, the disk is the same, but for Windows it used to be Red Hat and now it isn't Red Hat anymore -- that counts as a disk change.{{< /callout/inline >}} exit safe mode:
 
 ```bash {linenos=false}
 bcdedit /deletevalue {current} safeboot
@@ -614,7 +614,7 @@ Unfortunately, at the time of writing this text, it doesn't work on the fly. Mea
 
 ## Pinning CPU cores & HugePages
 
-The most interesting and simplest part. But first, a preamble.{{% callout/inline hyphens %}}![Emaa Skye Write](@loose/img/memes/animated.ema-skye-write-1.avif){{% /callout/inline %}}
+The most interesting and simplest part. But first, a preamble.{{< callout/inline >}}![Emaa Skye Write](@loose/img/memes/animated.ema-skye-write-1.avif){{< /callout/inline >}}
 
 With Intel's f\*ckton-of-cores chips, it's not quite a f\*ckton of cores. There are P-cores -- performance cores, and E-cores -- energy-efficient cores, performance ones are powerful, energy-efficient ones are kind of "on life support". Take the legendary i5-14600K, for example, it has 14 cores, right? But...
 
@@ -1902,7 +1902,7 @@ sudo zypper install looking-glass-client looking-glass-kvmfr-kmp-default
 
 Looking Glass **can't** handle more than 1 monitor, and Looking Glass will capture whichever one is the PRIMARY one in the guest. Meaning, the size needs to be calculated based on the monitor that's going to be captured.
 
-The math is as follows:{{% callout/inline hyphens %}}![Ema Skye Write](@loose/img/memes/animated.meonly-1.avif){{% /callout/inline %}}
+The math is as follows:{{< callout/inline >}}![Ema Skye Write](@loose/img/memes/animated.meonly-1.avif){{< /callout/inline >}}
 
 $$ ((width \times height) \times (pixel\\_size \times 2) \div 1024 \div 1024) + 10 $$
 
@@ -2238,7 +2238,7 @@ Don't forget to change the VM name, the socket path (if it's different), and the
 In the future (probably in the **very** distant future), the library file "libnvidia-ml.so" (name) might get a major version bump `.so-1` --> `.so-2`, keep that in mind.
 {{< /callout/note >}}
 
-The python script grabs the temperature from the host, but if the sensor is unavailable, it grabs the temperature from the guest's socket instead. If for some reason nothing is available, it falls back to the temperature set in `FALLBACK_TEMP`,{{% callout/inline hyphens %}}This isn't a huge deal -- 50 is neither too much nor too little, but of course it's better to set your own individual value -- your GPU's idle temperature.{{% /callout/inline %}} but that might seem unsafe. And it is, sort of, but not really.
+The python script grabs the temperature from the host, but if the sensor is unavailable, it grabs the temperature from the guest's socket instead. If for some reason nothing is available, it falls back to the temperature set in `FALLBACK_TEMP`,{{< callout/inline >}}This isn't a huge deal -- 50 is neither too much nor too little, but of course it's better to set your own individual value -- your GPU's idle temperature.{{< /callout/inline >}} but that might seem unsafe. And it is, sort of, but not really.
 
 {{< callout/note >}}
 About it being unsafe: it's unsafe for the GPU **only** if you want to control the GPU's own fans. But if you want to control the GPU's fans, then you **don't need** to pass the temperature through to the host, the host already has full access to the dGPU whenever the VM **isn't** running.
@@ -2887,7 +2887,7 @@ src="@img/benchmark-cp2077-forza-horizon-6.avif" >}}
 
 ---
 
-So, 4 months later {{% callout/inline hyphens %}}01.11.2026{{% /callout/inline %}} of using a Linux host and Windows in KVM. A pile of host updates, a bit fewer guest ones, all kinds of software and games. Everything works f\*cking great, I recommend it.
+So, 4 months later {{< callout/inline >}}01.11.2026{{< /callout/inline >}} of using a Linux host and Windows in KVM. A pile of host updates, a bit fewer guest ones, all kinds of software and games. Everything works f\*cking great, I recommend it.
 
 I made new and more comprehensive benchmarks, this time on a lived-in Windows install, not a clean one, and with a pile of software, in the same Cyberpunk 2077, as well as in [Black Myth: Wukong Benchmark Tool](https://store.steampowered.com/app/3132990/Black_Myth_Wukong_Benchmark_Tool/?sl), [Bright Memory: Infinite Ray Tracing Benchmark](https://store.steampowered.com/app/1409670/Bright_Memory_Infinite_Ray_Tracing_Benchmark/?sl) and [3DMark](https://store.steampowered.com/app/223850/3DMark/?sl) ([Time Spy](https://store.steampowered.com/app/496100/3DMark_Time_Spy_benchmark/?sl), [Steel Nomad](https://store.steampowered.com/app/2695340/3DMark_Steel_Nomad/?sl), [CPU Profile](https://store.steampowered.com/app/1654370/3DMark_CPU_Profile_benchmarks/?sl)).
 

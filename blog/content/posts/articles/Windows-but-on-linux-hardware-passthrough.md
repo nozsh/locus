@@ -163,11 +163,11 @@ GUEST (Windows) [железка (стала тут)]
 
 Итак. Я выбрал openSUSE Tumbleweed + KDE Plasma. _Почему?_ Нам нужны самые новые релизы всего и вся -- rolling-release схема, чтобы сделать этот трюк с виртуалкой с производительностью 1:1 к голому железу. Debian и прочие LTS дистрибутивы _не очень_ подходят.
 
-Очевидный вариант -- это Arch.{{% callout/inline hyphens %}}![I use Arch btw](@loose/img/memes/i-use-arch-btw-1.cropped.avif){{% /callout/inline %}} Разработчик выкатил апдейт софта -- вы его установили, то что надо. Но из-за этого Arch часто ломается, и приходится мониторить [новостную ленту](https://archlinux.org/news/?sl) обновлений на предмет "а не сломается ли моя система после апдейта и что я должен сделать руками", *не круто*.
+Очевидный вариант -- это Arch.{{< callout/inline >}}![I use Arch btw](@loose/img/memes/i-use-arch-btw-1.cropped.avif){{< /callout/inline >}} Разработчик выкатил апдейт софта -- вы его установили, то что надо. Но из-за этого Arch часто ломается, и приходится мониторить [новостную ленту](https://archlinux.org/news/?sl) обновлений на предмет "а не сломается ли моя система после апдейта и что я должен сделать руками", *не круто*.
 
 Есть Void, это как Arch, только обновления автоматически тестируются, вероятность, что система ляжет после обновления сильно меньше. Но Void использует runit вместо systemd, для кого-то это плюс, но systemd мегапопулярен, все делается под него, вам оно надо учитывая сложность темы? Ну и еще я слышал там в основном старье/скудные репозитории, все новое нужно собирать ручками.
 
-И третий вариант --- openSUSE Tumbleweed,{{% callout/inline hyphens %}}![Arch for fun, openSUSE for work](@loose/img/memes/animated.feel-me-think-about-it-1.avif){{% /callout/inline %}} это как Void, но с systemd и новейшим софтом, а также встроенным GUI приложением YaST через которое можно настроить систему и установить KVM буквально в один клик.
+И третий вариант --- openSUSE Tumbleweed,{{< callout/inline >}}![Arch for fun, openSUSE for work](@loose/img/memes/animated.feel-me-think-about-it-1.avif){{< /callout/inline >}} это как Void, но с systemd и новейшим софтом, а также встроенным GUI приложением YaST через которое можно настроить систему и установить KVM буквально в один клик.
 
 Ну, а KDE Plasma, потому что она самая навороченная и простая. На первое время + тестов -- самое оно. *На момент написания этого текста только в KDE Plasma нормально работает 4K HDR 320 Hz, или типа того, возможно кому-то это важно.*
 
@@ -411,7 +411,7 @@ Add Hardware --> PCI Host Device, тут надо найти нужный SSD, �
 
 Идем в Boot Options и там выбираем тот самый "PCI ID". Все. Было просто, да?
 
-Windows должна загрузиться в безопасный режим,{{% callout/inline hyphens %}}В безопасный режим желательно входить, когда меняется системный диск, диск тот же, но для Windows был Red Hat, стал не Red Hat -- смена диска.{{% /callout/inline %}} выходим из безопасного режима:
+Windows должна загрузиться в безопасный режим,{{< callout/inline >}}В безопасный режим желательно входить, когда меняется системный диск, диск тот же, но для Windows был Red Hat, стал не Red Hat -- смена диска.{{< /callout/inline >}} выходим из безопасного режима:
 
 ```bash {linenos=false}
 bcdedit /deletevalue {current} safeboot
@@ -614,7 +614,7 @@ sudo evtest /dev/input/by-id/vm-keyboard-event-kbd
 
 ## Pinning CPU ядер & HugePages
 
-Самое интересное и простое. Но для начала предисловие.{{% callout/inline hyphens %}}![Emaa Skye Write](@loose/img/memes/animated.ema-skye-write-1.avif){{% /callout/inline %}}
+Самое интересное и простое. Но для начала предисловие.{{< callout/inline >}}![Emaa Skye Write](@loose/img/memes/animated.ema-skye-write-1.avif){{< /callout/inline >}}
 
 У дох\*я ядерников Intel не совсем дох\*я ядер. Есть P-ядра -- производительные, и E-ядра -- энергоэффективные, производительные мощные, энергоэффективные так "на подсосе". Ну скажем легенда i5-14600K, у него 14 ядер, верно? Но...
 
@@ -1900,7 +1900,7 @@ sudo zypper install looking-glass-client looking-glass-kvmfr-kmp-default
 
 Looking Glass **не умеет** в больше 1-го монитора, и Looking Glass захватит тот, что в госте ОСНОВНОЙ. То есть, размер надо рассчитывать исходя из монитора который будет захватываться.
 
-Математика такая:{{% callout/inline hyphens %}}![Ema Skye Write](@loose/img/memes/animated.meonly-1.avif){{% /callout/inline %}}
+Математика такая:{{< callout/inline >}}![Ema Skye Write](@loose/img/memes/animated.meonly-1.avif){{< /callout/inline >}}
 
 $$ ((width \times height) \times (pixel\\_size \times 2) \div 1024 \div 1024) + 10 $$
 
@@ -2238,7 +2238,7 @@ sudo nano /usr/local/sbin/gpu-temp-bridge/gpu-temp-bridge.py
 В будущем (вероятно **очень** далеком), файл библиотеки "libnvidia-ml.so" (название) может поменяться мажорная версия `.so-1` --> `.so-2`, имейте это в виду.
 {{< /callout/note >}}
 
-Python скрипт берет температуру с хоста, но если датчик недоступен, то берет температуру из сокета гостя. В случае чего если ничего недоступно ставится температура из `FALLBACK_TEMP`,{{% callout/inline hyphens %}}Это не так важно -- 50 это ни много ни мало, но лучше конечно поставить индивидуальное значение -- ваша температура карты в простое.{{% /callout/inline %}} но это может показаться небезопасно. И оно так и есть, но не совсем.
+Python скрипт берет температуру с хоста, но если датчик недоступен, то берет температуру из сокета гостя. В случае чего если ничего недоступно ставится температура из `FALLBACK_TEMP`,{{< callout/inline >}}Это не так важно -- 50 это ни много ни мало, но лучше конечно поставить индивидуальное значение -- ваша температура карты в простое.{{< /callout/inline >}} но это может показаться небезопасно. И оно так и есть, но не совсем.
 
 {{< callout/note >}}
 Про небезопасно, небезопасно для GPU **только** если вы хотите контролить кулера GPU. Но если вы хотите контролить кулера GPU, то пробрасывать температуру на хост **не нужно**, хост уже имеет полный доступ к dGPU, когда виртуалка **не** запущена.
@@ -2888,7 +2888,7 @@ src="@img/benchmark-cp2077-forza-horizon-6.avif" >}}
 
 ---
 
-Итак, 4 месяца спустя {{% callout/inline hyphens %}}01.11.2026{{% /callout/inline %}} использования Linux хоста и Windows в KVM. Куча обновлений хоста, чуть поменьше гостя, разный софт и игры. Все работает ах\*ено, всем советую.
+Итак, 4 месяца спустя {{< callout/inline >}}01.11.2026{{< /callout/inline >}} использования Linux хоста и Windows в KVM. Куча обновлений хоста, чуть поменьше гостя, разный софт и игры. Все работает ах\*ено, всем советую.
 
 Я сделал новые и более полные бенчмарки, на этот раз на поюзанной, а не чистой Windows, и с кучей софта, в том же Cyberpunk 2077, а также в [Black Myth: Wukong Benchmark Tool](https://store.steampowered.com/app/3132990/Black_Myth_Wukong_Benchmark_Tool/?sl), [Bright Memory: Infinite Ray Tracing Benchmark](https://store.steampowered.com/app/1409670/Bright_Memory_Infinite_Ray_Tracing_Benchmark/?sl) и [3DMark](https://store.steampowered.com/app/223850/3DMark/?sl) ([Time Spy](https://store.steampowered.com/app/496100/3DMark_Time_Spy_benchmark/?sl), [Steel Nomad](https://store.steampowered.com/app/2695340/3DMark_Steel_Nomad/?sl), [CPU Profile](https://store.steampowered.com/app/1654370/3DMark_CPU_Profile_benchmarks/?sl)).
 

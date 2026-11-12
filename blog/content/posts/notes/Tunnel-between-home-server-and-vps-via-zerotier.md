@@ -85,7 +85,7 @@ NET_ID="XYZ"; docker exec ztnet sh -c "cd /var/lib/zerotier-one && mkdir network
 
 Где `XYZ` -- ID сети.
 
-Если добавляли другие домены помимо панели нужно отредактировать NGINX конфиги -- изменить `proxy_pass`. {{< callout/inline hyphens >}}Можно не добавлять доп. домены сразу. Потом просто использовать <a href="#добавлениенастройка-сервисов-nginx">скрипт</a>.{{< /callout/inline >}} Где `<ZeroTier_IP>` IP домашнего сервера в ZeroTier сети, `APP_PORT` порт на котором работает сервис на домашнем сервере.
+Если добавляли другие домены помимо панели нужно отредактировать NGINX конфиги -- изменить `proxy_pass`. {{< callout/inline >}}Можно не добавлять доп. домены сразу. Потом просто использовать [скрипт](#добавлениенастройка-сервисов-nginx).{{< /callout/inline >}} Где `<ZeroTier_IP>` IP домашнего сервера в ZeroTier сети, `APP_PORT` порт на котором работает сервис на домашнем сервере.
 
 ```bash {linenos=false}
 docker compose down && docker compose up -d && docker compose logs -f
