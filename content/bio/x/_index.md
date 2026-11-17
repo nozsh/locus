@@ -51,4 +51,4 @@ build:
   list: never
 ---
 
-[X/Twitter](https://x.com/shapedxc?sl) \\\ [Telegram](https://t.me/shapedx2?sl)
+[Telegram](https://t.me/shapedx2?sl)

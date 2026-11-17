@@ -38,8 +38,8 @@ hideAuthor: true
 # byai: true
 cover:
   image: "@img/typo-cover.avif" # image path/url
-  # width: "" # only for img from url; EX: 1920
-  # height: "" # only for img from url; EX: 1080
+  width: "1920" # only for img from url; EX: 1920
+  height: "1280" # only for img from url; EX: 1080
   alt: "Typo Cover" # alt text
   caption: "Photo by [camilo jimenez](https://unsplash.com/@camstejim?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
