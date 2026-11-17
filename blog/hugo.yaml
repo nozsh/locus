@@ -152,7 +152,7 @@ languages:
 
 pagination:
   disableAliases: false
-  pagerSize: 12
+  pagerSize: 6
 
 enableRobotsTXT: false
 buildDrafts: false
