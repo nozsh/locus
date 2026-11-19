@@ -37,7 +37,6 @@ showToc: true
 # ShowCanonicalLink: true
 # UseHugoToc: false
 # math: true
-# remoteCode: true
 # byai: true
 cover:
   image: "@img/cover.yubikey-hardware-key-as-password-alternative-on-linux.webp" # image url

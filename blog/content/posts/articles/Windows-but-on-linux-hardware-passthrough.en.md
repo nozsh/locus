@@ -36,7 +36,6 @@ showToc: true
 # ShowCanonicalLink: true
 # UseHugoToc: false
 math: true
-remoteCode: true
 byai: true
 cover:
   image: "@img/cover.windows-but-on-linux-hardware-passthrough.webp" # image url

@@ -36,7 +36,6 @@ showToc: true
 # ShowCanonicalLink: true
 # UseHugoToc: false
 # math: true
-# remoteCode: true
 # byai: true
 cover:
   # image: "image" # image url

@@ -33,7 +33,6 @@ ShowBreadCrumbs: false
 # CanonicalLinkText: "Источник:"
 # UseHugoToc: false
 math: true
-remoteCode: true
 hideAuthor: true
 # byai: true
 cover:
@@ -654,12 +653,6 @@ llinks_safe = document
 ## Remote Code
 
 {{< remote-code "https://github.com/nozsh/zeta-paste/blob/main/tsconfig.json" >}}
-
-```yaml {linenos=false}
----
-remoteCode: true
----
-```
 
 ```md {linenos=false}
 {{</* remote-code "link" */>}}
